@@ -8,8 +8,7 @@ using UnityEngine.InputSystem.Controls;
 namespace Misun
 {
     /// <summary>
-    /// 對話系統,有打字機效果
-    /// 對話完成之後才可以跳到下一步(下個對話)
+    /// 對話系統,有打字機效果,可快速跳過
     /// 對話期間限制其行動能力
     /// </summary>
     /// 
@@ -94,24 +93,7 @@ namespace Misun
                 }
                 
                 
-                /* for (int j = 0; isTyping && j < data.dialogueContents[i].Length-1; j++)
-                 {
-                    if (Input.GetKeyDown(KeyCode.Space))
-                    {
-                        isTyping = false;
-                    }
-                    print("打字!："+j);
-                     textContents.text += data.dialogueContents[i][j];
-                     yield return dialogueInterval;
-
-                    if(Input.GetKeyDown(KeyCode.Space))
-                    {
-                        isTyping = false;
-                    }
-                     
-                 }
-                */
-                 
+                               
 
 
                 textContents.text = data.dialogueContents[i];

@@ -207,7 +207,8 @@ MonoBehaviour:
     Dialogue Contents '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61c4dc271616fc44ebdd133d42a6b5aa, type: 2}
-  m_sharedMaterial: {fileID: -7706382955933707961, guid: 61c4dc271616fc44ebdd133d42a6b5aa, type: 2}
+  m_sharedMaterial: {fileID: -7706382955933707961, guid: 61c4dc271616fc44ebdd133d42a6b5aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -421,7 +422,8 @@ MonoBehaviour:
   m_text: "\u5C0D\u8A71\u8005\u540D\u7A31"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61c4dc271616fc44ebdd133d42a6b5aa, type: 2}
-  m_sharedMaterial: {fileID: -7706382955933707961, guid: 61c4dc271616fc44ebdd133d42a6b5aa, type: 2}
+  m_sharedMaterial: {fileID: -7706382955933707961, guid: 61c4dc271616fc44ebdd133d42a6b5aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -680,6 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTntervalTime: 0.1
+  IntervalTime: 0.1
   dialogueOpening: {fileID: 11400000, guid: 9948d2e40146b7349a3fbc1821c254c0, type: 2}
 --- !u!225 &6743564864681414910
 CanvasGroup:
