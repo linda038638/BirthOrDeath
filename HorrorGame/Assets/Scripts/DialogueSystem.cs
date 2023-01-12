@@ -29,10 +29,11 @@ namespace Misun
         private TextMeshProUGUI textName;
         private TextMeshProUGUI textContents;
         private GameObject goToNext;
-        private PlayerInput playerInput; //玩家輸入元件
+        private PlayerInput playerInput;     //玩家輸入元件
+        private UnityEvent onDiaogueFinish;  //結束事件
         #endregion
-        
-        private UnityEvent onDiaogueFinish;
+
+
 
         #region 預處理事件
         private void Awake()
@@ -54,6 +55,8 @@ namespace Misun
         /// </summary>
         /// <param name="data">要執行對話的資料</param>
         /// <param name="_onDialogueFinish">對話後的事件，可以空值</param>
+        
+        
         public void StartDialogue(DialogueData data , UnityEvent _onDialogueFinish = null)
         {
             playerInput.enabled = false;
@@ -63,7 +66,7 @@ namespace Misun
             onDiaogueFinish = _onDialogueFinish;
         }
 
-
+        #region 打字機效果
         private IEnumerator TypeEffect(DialogueData data)
         {
             StartCoroutine(FadeGroup(true));
@@ -115,9 +118,9 @@ namespace Misun
             onDiaogueFinish?.Invoke();  //呼叫對話後的事件 ?.表示可以空值
 
         }
+        #endregion
 
-
-        #region FadeIn
+        #region 淡出淡入
 
         private IEnumerator FadeGroup(bool fadeIn = true)
         {

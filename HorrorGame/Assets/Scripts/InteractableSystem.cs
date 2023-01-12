@@ -23,6 +23,7 @@ namespace Misun
         [SerializeField, Header("啟動後對話結束後的事件")]
         private UnityEvent onDiaogueFinishAfterActive;
         private string nameTarget = "PlayerCapsule";
+        static private int chatTimes = 0;
 
         private DialogueSystem dialogueSystem;
         private void Awake()
@@ -33,9 +34,21 @@ namespace Misun
 
         private void OnTriggerEnter(Collider other)
         {
+
+            if(this.gameObject.name.Contains("c8c8"))
+            {
+                chatTimes++;
+            }
+            print(chatTimes);
+
             if(other.gameObject.name == nameTarget)
             {
-                if(propActive == null || propActive.activeInHierarchy)
+                 if(chatTimes >= 3 && this.gameObject.name.Contains("c8c8"))
+                {
+                    
+                    dialogueSystem.StartDialogue(dataDialogueActive, onDiaogueFinishAfterActive);
+                
+                }else if(propActive == null || propActive.activeInHierarchy )
                 {
                     
                     Debug.Log("第一階段說話");
@@ -47,6 +60,7 @@ namespace Misun
                     dialogueSystem.StartDialogue(dataDialogueActive, onDiaogueFinishAfterActive);
                     
                 }
+               
                 
             }
         }
