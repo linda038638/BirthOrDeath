@@ -35,7 +35,7 @@ namespace Misun
         private void OnTriggerEnter(Collider other)
         {
 
-            if(this.gameObject.name.Contains("c8c8"))
+            if(this.gameObject.name.Contains("c8"))
             {
                 chatTimes++;
             }
@@ -43,7 +43,7 @@ namespace Misun
 
             if(other.gameObject.name == nameTarget)
             {
-                 if(chatTimes >= 3 && this.gameObject.name.Contains("c8c8"))
+                 if( 6>chatTimes && chatTimes>3 && this.gameObject.name.Contains("c8c8"))
                 {
                     
                     dialogueSystem.StartDialogue(dataDialogueActive, onDiaogueFinishAfterActive);
