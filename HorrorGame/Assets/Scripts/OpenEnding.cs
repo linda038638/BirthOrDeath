@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenEnding : MonoBehaviour
+namespace Misun
 {
-    // Start is called before the first frame update
-    void Start()
+    public class OpenEnding : MonoBehaviour
     {
-        
+        [SerializeField,Header("通關畫面")]
+        private GameObject gameObject;
+
+        private void Awake()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void Ending()
+        {
+            gameObject.SetActive(true);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+
