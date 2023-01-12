@@ -59,8 +59,8 @@ namespace Misun
         
         public void StartDialogue(DialogueData data , UnityEvent _onDialogueFinish = null)
         {
+            
             playerInput.enabled = false;
-            //Debug.Log("unable");
             StartCoroutine(TypeEffect(data)); //協程開始
             //這裡寫的東西會跟協程的東西同步進行(***所以不會等協程程式結束才執行***)
             onDiaogueFinish = _onDialogueFinish;
@@ -69,7 +69,7 @@ namespace Misun
         #region 打字機效果
         private IEnumerator TypeEffect(DialogueData data)
         {
-            StartCoroutine(FadeGroup(true));
+           StartCoroutine(FadeGroup(true));
 
             textName.text = data.dialogueName;
             
